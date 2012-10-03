@@ -1,4 +1,5 @@
-jNode is a complex portable application, providing all necessary functions (mailer, tosser, tracker) for a FTN system. 
+**jNode** is a complex portable application, providing all necessary functions (mailer, tosser, tracker) for a FTN system.
+
 It's written in Java (version 1.7 recommended) and distributed under the terms of Apache License 2.0.
 
 Features of the current version:
@@ -8,7 +9,7 @@ Features of the current version:
 - multithreading
 - netmail routing and tracking
 - robots
-- simple AreaFix (+echo, -echo, %rescan, %list, %help)
+- simple AreaFix (`+echo`, `-echo`, `%rescan`, `%list`, `%help`)
 
-jNode uses the ORMLite (http://ormlite.com) library for SQL database access, thus supporting DB2, Derby, H2, hSQL, mySQL, Netezza, Oracle, PostgreSQL, SQLite, MS SQL Server.
+jNode uses the [ORMLite](http://ormlite.com) library for SQL database access, thus supporting DB2, Derby, H2, hSQL, mySQL, Netezza, Oracle, PostgreSQL, SQLite, MS SQL Server.
 
