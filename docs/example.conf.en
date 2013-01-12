@@ -25,9 +25,9 @@ binkp.inbound = /var/spool/jnode/inbound
 binkp.server = 1
 # Comment this if you want turn off client
 binkp.client = 1
-# First pool delay
+# First poll delay
 poll.delay = 600
-# Next pools delay
+# Next polls delay
 poll.period = 600
 # Log level, 5->1
 log.level = 4
@@ -39,3 +39,7 @@ nodelist.index = /var/spool/jnode/NODELIST.idx
 fileecho.enable = 1
 # Fileecho base dir
 fileecho.path = /var/spool/jnode/files
+# Uncomment to enable posting statistics
+#stat.enable = 1
+# Echoarea in which posters write statistics
+stat.area = jnode.local.stat

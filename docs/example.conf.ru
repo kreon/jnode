@@ -14,7 +14,7 @@ info.address = 2:256/128@fidonet
 jdbc.url = jdbc:postgresql://localhost/database
 jdbc.user = username
 jdbc.pass = password
-# Что слушать для входящий соединений
+# Что слушать для входящих соединений
 binkp.bind = 0.0.0.0
 # Какой порт слушать
 binkp.port = 24554
@@ -38,3 +38,7 @@ nodelist.index = /var/spool/jnode/NODELIST.idx
 fileecho.enable = 1
 # Путь к фэхам
 fileecho.path = /var/spool/jnode/files
+# Расскомментируйте, чтобы включить постинг статистики
+#stat.enable = 1
+# Эхоконференция, в которую пишут постеры статистики
+stat.area = jnode.local.stat
