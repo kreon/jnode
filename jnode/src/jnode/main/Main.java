@@ -10,6 +10,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import jnode.ftn.types.FtnAddress;
+import jnode.jscript.JscriptExecutor;
 import jnode.logger.Logger;
 import jnode.main.threads.PollQueue;
 import jnode.main.threads.TimerPoll;
@@ -42,7 +43,7 @@ public class Main {
 				"log.level"), NODELIST_PATH("nodelist.path"), NODELIST_INDEX(
 				"nodelist.index"), FILEECHO_ENABLE("fileecho.enable"), FILEECHO_PATH(
 				"fileecho.path"), STAT_ENABLE("stat.enable"), STAT_ECHOAREA(
-				"stat.area");
+				"stat.area"), JSCRIPT_ENABLE("jscript.enable");
 		private String cfgline;
 
 		private Settings(String cfgline) {
@@ -143,6 +144,10 @@ public class Main {
 		return true;
 	}
 
+	public static boolean isJscriptEnable() {
+		return settings.get(Settings.JSCRIPT_ENABLE.cfgline) != null;
+	}
+	
 	public Main(String configFile) {
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(configFile));
@@ -248,6 +253,10 @@ public class Main {
 			new Timer().schedule(new TosserTask(), 10000, 10000);
 			new StatPoster();
 			logger.l4("Started StatPoster");
+			if (isJscriptEnable()){
+				new JscriptExecutor();
+				logger.l4("Started JscriptExecutor");
+			}
 			logger.l1("jNode is working now");
 		}
 	}

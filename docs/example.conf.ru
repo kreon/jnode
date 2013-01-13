@@ -38,7 +38,9 @@ nodelist.index = /var/spool/jnode/NODELIST.idx
 fileecho.enable = 1
 # Путь к фэхам
 fileecho.path = /var/spool/jnode/files
-# Расскомментируйте, чтобы включить постинг статистики
+# Раскомментируйте, чтобы включить постинг статистики
 #stat.enable = 1
 # Эхоконференция, в которую пишут постеры статистики
 stat.area = jnode.local.stat
+# Раскомментируйте, чтобы включить запуск пользовательских скриптов по расписанию
+#jscript.enable = 1

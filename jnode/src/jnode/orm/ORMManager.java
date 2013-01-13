@@ -19,7 +19,7 @@ public enum ORMManager {
 	private GenericDAO<Filearea> fileareaDAO;
 	private GenericDAO<Filemail> filemailDAO;
 	private GenericDAO<FilemailAwaiting> filemailAwaitingDAO;
-	private GenericDAO<FileSubscription> FileSubscriptionDAO;
+	private GenericDAO<FileSubscription> fileSubscriptionDAO;
 	private GenericDAO<Link> linkDAO;
 	private GenericDAO<LinkOption> linkOptionDAO;
 	private GenericDAO<Netmail> netmailDAO;
@@ -27,6 +27,8 @@ public enum ORMManager {
 	private GenericDAO<Robot> robotDAO;
 	private GenericDAO<Route> routeDAO;
 	private GenericDAO<Subscription> subscriptionDAO;
+	private GenericDAO<Jscript> jscriptDAO;
+	private GenericDAO<Schedule> scheduleDAO;
 
 	public void start() throws Exception {
 		dupeDAO = new GenericDAO<Dupe>() {
@@ -78,7 +80,7 @@ public enum ORMManager {
 				return FilemailAwaiting.class;
 			}
 		};
-		FileSubscriptionDAO = new GenericDAO<FileSubscription>() {
+		fileSubscriptionDAO = new GenericDAO<FileSubscription>() {
 
 			@Override
 			protected Class<?> getType() {
@@ -134,6 +136,20 @@ public enum ORMManager {
 				return Subscription.class;
 			}
 		};
+		jscriptDAO = new GenericDAO<Jscript>() {
+
+			@Override
+			protected Class<?> getType() {
+				return Jscript.class;
+			}
+		};
+		scheduleDAO = new GenericDAO<Schedule>() {
+
+			@Override
+			protected Class<?> getType() {
+				return Schedule.class;
+			}
+		};
 
 	}
 
@@ -166,7 +182,7 @@ public enum ORMManager {
 	}
 
 	public GenericDAO<FileSubscription> getFileSubscriptionDAO() {
-		return FileSubscriptionDAO;
+		return fileSubscriptionDAO;
 	}
 
 	public GenericDAO<Link> getLinkDAO() {
@@ -195,6 +211,14 @@ public enum ORMManager {
 
 	public GenericDAO<Subscription> getSubscriptionDAO() {
 		return subscriptionDAO;
+	}
+
+	public GenericDAO<Jscript> getJscriptDAO() {
+		return jscriptDAO;
+	}
+
+	public GenericDAO<Schedule> getScheduleDAO() {
+		return scheduleDAO;
 	}
 
 }
