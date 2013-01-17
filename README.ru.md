@@ -12,4 +12,5 @@
 - Управление роботами
 - Простейший робот AreaFix (подписка, отписка, рескан, `%LIST` и `%HELP`)
 - Простейший робот FileFix (подписка, отписка, `%LIST` и `%HELP`)
+
 Приложение построено с использованием библиотеки [ORMLite](http://ormlite.com), поэтому поддерживаются следующие СУБД: DB2, Derby, H2, hSQL, mySQL, Netezza, Oracle, PostgreSQL, SQLite, MS SQL Server.
