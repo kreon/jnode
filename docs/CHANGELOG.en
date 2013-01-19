@@ -74,3 +74,5 @@
 - FileAutoCreate - create fileecho is not exists
 17.10.2012, 0.5.1:
 + New robot FileFix
+16.01.2013, 0.5.5.7
++ Running custom scripts on a schedule

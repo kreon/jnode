@@ -1,5 +1,5 @@
 #!/bin/sh
-CLASSPATH="../jar/jnode.jar";
+CLASSPATH="../jar/jnode-0.5.5.7.jar";
 for I in ../lib/*.jar; do
     CLASSPATH="$CLASSPATH:$I"
 done

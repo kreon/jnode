@@ -60,7 +60,7 @@ public class Server extends Thread {
 
 	@Override
 	public void run() {
-		logger.l4("Сервер слушает на " + host + ":" + port);
+		logger.l4("Server listens on " + host + ":" + port);
 		try {
 
 			ServerSocket socket = new ServerSocket(port, 0,
@@ -72,14 +72,14 @@ public class Server extends Thread {
 			}
 			socket.close();
 		} catch (IOException e) {
-			logger.l2("Ошибка сервера: " + e.getMessage());
+			logger.l2("Server error: " + e.getMessage());
 		}
 		errors++;
 		if (errors < 10) {
-			logger.l3("Сервер упал, перезапускаем");
+			logger.l3("Server crashed, restart");
 			this.run();
 		} else {
-			logger.l2("Сервер упал 10 раз, выходим");
+			logger.l2("Server crashed 10 times, leave");
 			System.exit(-1);
 		}
 	}

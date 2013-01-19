@@ -27,7 +27,7 @@ import jnode.orm.ORMManager;
  */
 public class JscriptExecutor implements Runnable {
 
-	private static final String HELPER = "helper";
+	public static final String HELPER = "helper";
 	private static final long MILLISEC_IN_DAY = 86400000L;
 	private static final Logger logger = Logger
 			.getLogger(JscriptExecutor.class);
